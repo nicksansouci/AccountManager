@@ -59,8 +59,9 @@ public:
 		return 0;
 	}
 	void ResetPassword()
-	{
-		std::cout << "Type your current password: " << std::endl;
+	{	std::cout << "Username: " <<std::endl;
+	    std::cin >> username;
+		std::cout << "Enter your current password: " << std::endl;
 		std::cin >> passwordcheck;
 		while (password != passwordcheck)
 		{
@@ -68,6 +69,8 @@ public:
 			std::cout << "Confirm password: " << std::endl;
 			std::cin >> passwordcheck;
 		}
+		std::cout << "Enter your new password: " <<std::endl;
+		std::cin >> password;
 		clear();
 		std::cout << "Successfully reset the password for " << username << "." <<std::endl;
 		
