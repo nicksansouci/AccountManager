@@ -18,28 +18,11 @@ int main()
 		account1.CreateAccount();
 		LiveAccount = true;
 	}
-	while (LiveAccount){
-	cout << "What would you like to do next? " <<endl;
-	cout << "1: List Accounts" << "\n" <<"2: Reset Username" << "\n" 
-	<< "3: Reset Password" << "\n" << "4: Delete Account"<< "\n" << "5: Create New Account" <<"\n";
-	cin >> y;
-	switch (y){
-		case 1:
-			account1.ListAccounts();
-			break;
-		case 2:
-			account1.ResetUsername();
-			break;
-		case 3:
-			account1.ResetPassword();
-			break;
-		case 4:
-			account1.DeleteAccount();
-		case 5:
-			account1.CreateAccount();
-			break;	
+	else{
+		cout << "Press 1 to create an account."<<std::endl;
+		main();
 	}
-}
+	account1.Menu();
 }
 
 
